@@ -25,7 +25,7 @@ class LikePost extends Component
             $this->likes--;
         } else {
             $this->post->likes()->create([
-                'user_id' => auth()->user()->id
+                'user_id' => auth()->user()
             ]);
             $this->isLike = true;
             $this->likes++;
